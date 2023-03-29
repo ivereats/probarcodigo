@@ -28,9 +28,9 @@ class CoordinadorAdapter(private val coordinadores: List<Coordinador>) :
     }
 
     override fun onBindViewHolder(holder: CoordinadorViewHolder, position: Int) {
-        holder.bind(coordinadores[position])
+        val coordinador = coordinadores[position]
+        holder.bind(coordinador)
     }
-
     override fun getItemCount(): Int {
         return coordinadores.size
     }
